@@ -6,7 +6,6 @@ setup(
     setup_requires=['setuptools_scm'],
 
     include_package_data=True,
-    zip_Storage=False,
 
     packages=['pynamelix'],
     install_requires=[

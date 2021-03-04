@@ -16,7 +16,7 @@ pipeline {
                 sh """#!/bin/bash
                     source venv/bin/activate
                     python -m pip install --no-cache --upgrade coverage pytest
-                    python -m coverage run --branch --source justic -m pytest --disable-pytest-warnings --junitxml junittest-coverage.xml
+                    python -m coverage run --branch --source pynamelix -m pytest --disable-pytest-warnings --junitxml junittest-coverage.xml
                     python -m coverage xml
                 """
             }
@@ -26,7 +26,7 @@ pipeline {
                 sh """#!/bin/bash
                     source venv/bin/activate
                     python -m pip install --no-cache --upgrade pylint pylint_junit
-                    python -m pylint --rcfile=setup.cfg --output-format=pylint_junit.JUnitReporter justic | tee junittest-pylint.xml
+                    python -m pylint --rcfile=setup.cfg --output-format=pylint_junit.JUnitReporter pynamelix | tee junittest-pylint.xml
                 """
             }
         }
