@@ -6,6 +6,7 @@ from check_pypi_name import check_pypi_name
 from pynamelix import __version__
 from pynamelix.utils import get_names
 
+
 logger = logging.getLogger(__name__)
 
 
